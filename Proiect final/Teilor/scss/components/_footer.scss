@@ -1,0 +1,41 @@
+footer {
+  &.container {
+    margin-top: 3em;
+  }
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .footer-box {
+    padding: 2em 0;
+    border-bottom: solid silver 1px;
+    @include tablet {
+      width: 50%;
+      border: none;
+    }
+    @include desktop {
+      width: 25%;
+      font-size: .8rem;
+    }
+    h2 {
+      font-weight: 800;
+    }
+    ul {
+      margin: 1em 0;
+      li {
+        line-height: 1.8em;
+
+        a {
+          text-decoration: underline;
+        }
+      }
+    }
+    .icons {
+      font-size: 2em;
+    }
+    p {
+      line-height: 2em;
+    }
+  }
+}

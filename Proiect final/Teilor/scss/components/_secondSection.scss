@@ -1,0 +1,77 @@
+.second-section {
+  background-color: #fff;
+  padding: 3em 0;
+  box-shadow: 0 .2rem .2rem 0 silver;
+
+  .container {
+    @include desktop {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+  }
+
+  .info {
+    padding-bottom: 2.8em;
+    border-bottom: solid #cfcfcf 1px;
+    @include desktop {
+      width: 70%;
+      border: none;
+    }
+    h2 {
+      font-weight: 800;
+      font-size: 1.6em;
+    }
+
+    p {
+      font-size: 0.8rem;
+      color: #787676;
+      margin: 2.5em 0;
+      a {
+        color: dodgerblue;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .images {
+    padding: 2.8em 0 0 0;
+    @include desktop {
+      padding: 0 2em 0 0 ;
+      width: 30%;
+      height: 30%;
+    }
+    h2 {
+      font-weight: 800;
+      font-size: 1rem;
+    }
+    .bijuterii {
+      padding: 1rem 0;
+      img {
+        border-radius: .3rem;
+        width: calc(50% - .4em);
+        border: none;
+        margin: .2em;
+        padding: 0;
+        &:nth-of-type(2n+1) {
+          margin-left: 0;
+        }
+        &:nth-of-type(2n) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  .buttons {
+    @include tablet {
+      width: 100%;
+      .btn {
+        justify-content: center;
+        flex-direction: row;
+      }
+    }
+    @include desktop {
+      width: 40%;
+    }
+  }
+}

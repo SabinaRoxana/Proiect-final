@@ -1,0 +1,50 @@
+.mobile-menu-container {
+  padding: 0.3em;
+  position: relative;
+  @include tablet {
+    display: none;
+  }
+  #nav-mobile {
+    display: none;
+  }
+  #show_menu {
+    display: none;
+    &:checked + #nav-mobile{
+      display: block;
+    }
+  }
+  label {
+    display: inline-block;
+    background-color: silver;
+    color: #fff;
+    padding: .3em .7em;
+    border-radius: .3em;
+  }
+  #nav-mobile {
+    display: none;
+    position: absolute;
+    width: calc(100% + .3em);
+    left: -.3em;
+    z-index: 2;
+    top:2.5em;
+    ul {
+      background-color: #fff;
+      li {
+        border-bottom: solid silver 1px;
+        text-align: center;
+        a {
+          background-color: transparent;
+          color: $base-font-color;
+          font-weight: 800;
+          line-height: 2em;
+        }
+      }
+    }
+  }
+
+  #show_menu:checked {
+    ~ #nav-mobile {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,76 @@
+html {
+  font-size: $base-font-size;
+  font-family: $base-font-family;
+  color: $base-font-color;
+  @include desktop {
+    font-size: $base-font-size * .8;
+  }
+}
+
+body {
+  background-color: $page-bg-color;
+}
+
+.mobile-menu-container {
+  padding: 0.3em;
+  @include tablet {
+    display: none;
+  }
+  a {
+    display: inline-block;
+    background-color: silver;
+    color: #fff;
+    padding: .3em .7em;
+    border-radius: .3em;
+  }
+}
+
+.container {
+  max-width: 600px;
+  @include tablet {
+    max-width: 1024px;
+  }
+  margin: 0 auto;
+  padding: 0 .7rem;
+}
+
+.buttons {
+  margin: .5em 0;
+  @include tablet {
+    width: 40%;
+  }
+  .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8em 0;
+    font-weight: 800;
+    background-color: silver;
+    border-radius: .3rem;
+    margin: .5em 0;
+    @include tablet {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      padding: .8em 1.8em;
+    }
+    i {
+      margin: 0 .5em;
+    }
+  }
+  .orange-button {
+    color: #fff;
+    background-color: $btn-bg-color;
+    &:hover {
+      background-color: $page-bg-color;
+      color: $base-font-color;
+    }
+  }
+  .grey-button {
+    background-color: $page-bg-color;
+    &:hover {
+      color: #fff;
+      background-color: $btn-bg-color;
+    }
+
+  }
+}
